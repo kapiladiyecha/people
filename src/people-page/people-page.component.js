@@ -4,6 +4,7 @@ import { getPeople } from "../utils/api.js";
 import PeopleList from "../people-list/people-list.component.js";
 import SelectedPerson from "./selected-person/selected-person.component.js";
 import { Button } from "@react-mf/styleguide";
+import RenderGrid from "./selected-person/ag-grid.component";
 
 const initialState = {
   pageNum: 1,
@@ -76,6 +77,11 @@ export default function PeoplePage(props) {
         <div className="w-2/3 p-6 border-l-2 border-white">
           <div>
             <SelectedPerson selectedPerson={selectedPerson} />
+          </div>
+        </div>
+        <div className="w-2/3 p-6 border-l-2 border-white">
+          <div>
+            <RenderGrid />
           </div>
         </div>
       </div>
